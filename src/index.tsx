@@ -50,7 +50,7 @@ export default class RootApp extends Component {
           style={{ marginVertical: 10 }}
           onPress={() => {
             ImagePicker.openPicker({
-              width: 100,
+              width: 150,
               height: 100,
               cropping: true,
               avoidEmptySpaceAroundImage: true
