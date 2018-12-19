@@ -38,6 +38,27 @@
   return YES;
 }
 
+//支付模块
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+  NSLog(@"url = %@",url);
+  NSString *tempUrl = [NSString stringWithFormat:@"%@",url];
+  //  if ([tempUrl containsString:@"wx"]) {
+  //    //微信支付 wxb3161d2abfdceb4c://pay[oauth]
+  //    return [RCTLinkingManager application:application openURL:url
+  //                        sourceApplication:sourceApplication annotation:annotation];
+  //  }
+  if([tempUrl containsString:@"alipay"]){
+    //支付宝
+    [AlipayModule handleCallback:url];
+    return YES;
+  }
+  return [RCTLinkingManager application:application openURL:url
+                      sourceApplication:sourceApplication annotation:annotation];
+}
+
+
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
   while ([[UIDevice currentDevice] isGeneratingDeviceOrientationNotifications]) {
     [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
