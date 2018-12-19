@@ -8,6 +8,7 @@
  */
 
 #import "AppDelegate.h"
+#import <React/RCTLinkingManager.h>
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
@@ -43,17 +44,17 @@
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
   NSLog(@"url = %@",url);
-  NSString *tempUrl = [NSString stringWithFormat:@"%@",url];
+  //  NSString *tempUrl = [NSString stringWithFormat:@"%@",url];
   //  if ([tempUrl containsString:@"wx"]) {
   //    //微信支付 wxb3161d2abfdceb4c://pay[oauth]
   //    return [RCTLinkingManager application:application openURL:url
   //                        sourceApplication:sourceApplication annotation:annotation];
   //  }
-  if([tempUrl containsString:@"alipay"]){
-    //支付宝
-    [AlipayModule handleCallback:url];
-    return YES;
-  }
+  //  if([tempUrl containsString:@"alipay"]){
+  //    //支付宝
+  //    [AlipayModule handleCallback:url];
+  //    return YES;
+  //  }
   return [RCTLinkingManager application:application openURL:url
                       sourceApplication:sourceApplication annotation:annotation];
 }
