@@ -4647,6 +4647,13 @@ react-lifecycles-compat@^3.0.2:
   resolved "http://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
 
+react-native-camera@^1.1.4:
+  version "1.6.4"
+  resolved "http://registry.npm.taobao.org/react-native-camera/download/react-native-camera-1.6.4.tgz#a7d0f3da8ff07be36c07e14dcae57d822a09013e"
+  integrity sha1-p9Dz2o/we+NsB+FNyuV9gioJAT4=
+  dependencies:
+    prop-types "^15.6.2"
+
 react-native-image-crop-picker@^0.21.3:
   version "0.21.3"
   resolved "http://registry.npm.taobao.org/react-native-image-crop-picker/download/react-native-image-crop-picker-0.21.3.tgz#04457a3f2a888949f51be4a670dcf2520b9994f8"

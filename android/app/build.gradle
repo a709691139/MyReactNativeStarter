@@ -150,6 +150,13 @@ android {
 }
 
 dependencies {
+    compile (project(':react-native-camera')) {
+        exclude group: "com.google.android.gms"
+        compile 'com.android.support:exifinterface:25.+'
+        compile ('com.google.android.gms:play-services-vision:12.0.1') {
+            force = true
+        }
+    }
     compile project(':react-native-image-crop-picker')
     compile project(':react-native-orientation')
     compile project(':react-native-splash-screen')
